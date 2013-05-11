@@ -1,0 +1,20 @@
+mysql: &mysql
+  adapter: mysql2
+  host: 127.0.0.1
+  username: root
+  password: apmsetup
+
+production:
+  <<: *mysql
+  database: smartclient
+  username: root
+
+development:
+  <<: *mysql
+  database: smartclient
+  username: root
+
+test:
+  <<: *mysql
+  database: smartclient_test
+  username: root
